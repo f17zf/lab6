@@ -1,0 +1,16 @@
+/* scoopi colours */
+:root {
+    --bs-primary-bg: #800020;
+    --bs-primary-fg: #800020;
+    --bs-primary-fg-emphasis: #600018;
+    --bs-primary-border: #800020;
+    --bs-primary-focus-ring: #800020;
+    --bs-primary-contrast: #ffffff;
+}
+
+/* burgundy buttons */
+.btn-solid.theme-primary {
+    --bs-theme-bg: #800020;
+    --bs-theme-border: #800020;
+    --bs-theme-contrast: #ffffff;
+}
