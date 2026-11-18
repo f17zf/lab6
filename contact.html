@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Scoopi | Event Enquiries</title>
+
+    <!-- bootstrap first, my colours after -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- same nav, contact is active -->
+    <nav class="navbar md:navbar-expand bg-1 fg-2">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Scoopi</a>
+
+            <button class="btn-icon navbar-toggler" type="button"
+                data-bs-toggle="drawer" data-bs-target="#scoopiNav"
+                aria-controls="scoopiNav" aria-expanded="false"
+                aria-label="Open navigation">
+                <span class="navbar-toggler-icon" aria-hidden="true"></span>
+            </button>
+
+            <dialog class="drawer drawer-end" tabindex="-1"
+                id="scoopiNav" aria-labelledby="scoopiNavLabel">
+                <div class="drawer-header">
+                    <p class="drawer-title" id="scoopiNavLabel">Menu</p>
+                    <button class="btn-close" type="button"
+                        data-bs-dismiss="drawer"
+                        aria-label="Close navigation"></button>
+                </div>
+
+                <div class="drawer-body">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contact.html"
+                                aria-current="page">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </dialog>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <header class="mb-5">
+            <h1>Let’s talk Scoopi</h1>
+            <p>
+                Planning an event? Tell us a little about it below.
+            </p>
+            <p id="formNote">
+                This is a class demo. Submitting reloads this page;
+                it does not send an enquiry or confirm a booking.
+            </p>
+        </header>
+
+        <!-- two per row on wider screens -->
+        <form action="contact.html" method="get"
+            aria-describedby="formNote">
+
+            <div class="row g-4">
+                <div class="col-12 md:col-6">
+                    <div class="form-field">
+                        <label class="form-label" for="firstName">
+                            First name
+                        </label>
+                        <input class="form-control" type="text"
+                            id="firstName" name="firstName" required>
+                    </div>
+                </div>
+
+                <div class="col-12 md:col-6">
+                    <div class="form-field">
+                        <label class="form-label" for="lastName">
+                            Last name
+                        </label>
+                        <input class="form-control" type="text"
+                            id="lastName" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="col-12 md:col-6">
+                    <div class="form-field">
+                        <label class="form-label" for="email">
+                            Email
+                        </label>
+                        <input class="form-control" type="email"
+                            id="email" name="email"
+                            placeholder="you@example.com" required>
+                    </div>
+                </div>
+
+                <div class="col-12 md:col-6">
+                    <div class="form-field">
+                        <label class="form-label" for="enquiryType">
+                            Enquiry type
+                        </label>
+                        <select class="form-control" id="enquiryType"
+                            name="enquiryType" required>
+                            <option value="">Choose an enquiry type</option>
+                            <option value="private">Private event</option>
+                            <option value="corporate">Corporate event</option>
+                            <option value="menu">Menu question</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-12 md:col-6">
+                    <div class="form-field">
+                        <label class="form-label" for="message">
+                            Message
+                        </label>
+                        <textarea class="form-control" id="message"
+                            name="message" rows="5" required></textarea>
+                    </div>
+                </div>
+
+                <div class="col-12 md:col-6">
+                    <div class="form-field">
+                        <input class="check" type="checkbox"
+                            id="consent" name="consent" value="yes" required>
+                        <label for="consent">
+                            I agree to be contacted about my enquiry.
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-solid theme-primary mt-4" type="submit">
+                Submit enquiry
+            </button>
+        </form>
+    </main>
+
+    <footer class="bg-1 py-4">
+        <div class="container">
+            <p>&copy; 2026 Scoopi. Created by Fatemah Zarif.</p>
+            <a href="contact.html">Contact Scoopi</a>
+        </div>
+    </footer>
+
+    <!-- same script on both pages -->
+    <script type="module" src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
